@@ -1,0 +1,43 @@
+mobius:
+  repository: mobius-event-bus
+  product: Mobius Platform
+  capability: Event Communication
+  department: Platform Services
+  owner: Mobius Technologies
+  mission: Connect Mobius services through event-driven architecture.
+  maturity: implemented
+  consumes:
+    - platform-events
+  produces:
+    - published-events
+    - event-subscriptions
+  schemas:
+    - MobiusEvent
+  events:
+    - RequestReceived
+    - IntentClassified
+    - MemoryLookupCompleted
+    - RouteSelected
+    - ProviderExecuted
+    - MemoryEventCreated
+    - PulseMetricRecorded
+    - McmsAuditRecorded
+    - DashboardRefreshRequested
+  dependencies:
+    - mobius-schema
+  dependents:
+    - mobius-api
+    - mobius-command-center
+    - atlas-core
+    - mobius-router
+    - mobius-memory
+    - mobius-pulse
+  pulse_metrics:
+    - event-throughput
+    - event-latency
+  memory_events:
+    - event-published
+  architecture_version: Enterprise Alpha v0.1
+  genesis_version: Genesis v1.0
+  canon_version: Canon v1.0
+  sync_status: synchronized
