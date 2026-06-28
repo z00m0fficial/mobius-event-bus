@@ -1,0 +1,17 @@
+repository: mobius-event-bus
+version: 0.1.0
+status: alpha
+layer: platform-integration
+department: Platform Services
+service: Event Bus
+mission: Provide event-driven communication between Mobius services.
+capabilities:
+  - publish-events
+  - subscribe-to-events
+  - event-contracts
+  - correlation-ids
+  - heartbeat-events
+quality_gates:
+  event_schema_required: true
+  correlation_id_supported: true
+  service_coupling_minimized: true
